@@ -1,4 +1,3 @@
-import React from 'react';
 import { MOCK_PROJECTS } from './MockProject';
 import ProjectList from './ProjectList';
 

@@ -1,5 +1,3 @@
-import React from 'react';
-
 function ProjectForm() {
   return (
     <form className="input-group vertical">

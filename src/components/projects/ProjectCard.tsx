@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Project } from './Project';
 
 const formaDescription = (description: string) => {
@@ -20,9 +21,11 @@ function ProjectCard(props: ProjectCardProps) {
     <div className="card">
       <img src={project.imageUrl} alt={project.name} />
       <section className="section dark">
-        <h5 className="strong">
-          <strong>{project.name}</strong>
-        </h5>
+        <Link to={'/projects/' + project.id}>
+          <h5 className="strong">
+            <strong>{project.name}</strong>
+          </h5>
+        </Link>
         <p>{formaDescription(project.description)}</p>
         <p>Budget: {project.budget.toLocaleString()}</p>
         <button className="bordered" onClick={() => handleEditClick(project)}>
